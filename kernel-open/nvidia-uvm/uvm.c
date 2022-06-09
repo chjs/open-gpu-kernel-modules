@@ -35,6 +35,7 @@
 #include "uvm_linux_ioctl.h"
 #include "uvm_hmm.h"
 #include "uvm_mem.h"
+#include "debug.h"
 
 #define NVIDIA_UVM_DEVICE_NAME          "nvidia-uvm"
 
@@ -1067,6 +1068,8 @@ static int uvm_init(void)
     bool initialized_globals = false;
     bool added_device = false;
     int ret;
+
+    sait_dbg("[%s] start!!\n", __func__);
 
     NV_STATUS status = uvm_global_init();
     if (status != NV_OK) {

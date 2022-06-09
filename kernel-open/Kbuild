@@ -87,7 +87,7 @@ ifeq ($(ARCH),arm64)
 endif
 
 ifeq ($(NV_BUILD_TYPE),debug)
- EXTRA_CFLAGS += -g -gsplit-dwarf
+ EXTRA_CFLAGS += -g -gsplit-dwarf -DSAIT_DEBUG
 endif
 
 EXTRA_CFLAGS += -ffreestanding
